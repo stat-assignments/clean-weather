@@ -1,8 +1,5 @@
 ---
-date: "Sep 11, 2026"
-output: 
-  md_document:
-    variant: markdown_github
+output: md_document
 ---
 
 # Cleaning the Weather Forecast

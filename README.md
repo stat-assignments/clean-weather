@@ -7,11 +7,9 @@ The file `scraper.R` contains the function `get_forecast` which
 downloads hourly forecast for the specified location, and converts the
 xml format into an R data frame.
 
-``` r
-source("scraper.R", verbose=F)
+    source("scraper.R", verbose=F)
 
-head(get_forecast)
-```
+    head(get_forecast)
 
     ##                                                                                                      
     ## 1 function (latitude, longitude)                                                                     
@@ -27,20 +25,16 @@ autmoatically evaluate `eval = FALSE`, since we do not want to download
 new data every single time we render the current document. Instead, the
 results are saved in `rds` format and loaded in the next code chunk.
 
-``` r
-lincoln <- get_forecast(40.8164, -96.6882)
-saveRDS(lincoln, "lincoln.rds")
+    lincoln <- get_forecast(40.8164, -96.6882)
+    saveRDS(lincoln, "lincoln.rds")
 
-ames <- get_forecast(42.04, -93.68)
-saveRDS(ames, "ames.rds")
-```
+    ames <- get_forecast(42.04, -93.68)
+    saveRDS(ames, "ames.rds")
 
 Load previously saved data for Lincoln:
 
-``` r
-lincoln <- readRDS("lincoln.rds")
-head(lincoln)
-```
+    lincoln <- readRDS("lincoln.rds")
+    head(lincoln)
 
     ## # A tibble: 6 × 9
     ##   parameter   type   units values times     latitude longitude conditions source
