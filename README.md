@@ -21,7 +21,7 @@ xml format into an R data frame.
 
 The `get_forecast` function can be used to get data for Lincoln, NE or
 Ames, IA as shown below. Note that this code chunk is set to not
-autmoatically evaluate `eval = FALSE`, since we do not want to download
+automatically evaluate `eval = FALSE`, since we do not want to download
 new data every single time we render the current document. Instead, the
 results are saved in `rds` format and loaded in the next code chunk.
 
